@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WebAppEnterprise.FinishedProducts>
+
+@{
+    ViewData["Title"] = "Index";
+}        
+        
+    <div>
+        <select class="form-control" asp-items="ViewBag.Product"></select>        
+    </div>
+    <div>
+        <a asp-action="List" asp-route-id="ViewBag.Product"></a>
+    </div>    
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h2 class="text-info">Ingredients</h2>
+            </div>
+            
+        </div>   
+        <div>
+            <a asp-action="Create">Create New</a> ||
+            <a asp-controller="Home" asp-action="Index">Back to List</a>
+        </div>
+        <table class="table table-bordered col-12">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            <a asp-action="List" asp-route-id="@item.Id">Show ingredients</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>

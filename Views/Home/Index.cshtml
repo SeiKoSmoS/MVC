@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="container">
+        <h1 class="text-dark col-1">Enterprise</h1>
+        <div class="row">
+
+            <div class="col-3 text-center">
+                <a asp-controller="RawMaterials" asp-action="Index" class="btn btn-outline-info form-control">Raw Materials</a>
+            </div>
+            <div class="col-3 text-center">
+                <a asp-controller="Ingredients" asp-action="Index" class="btn btn-outline-info form-control">Ingredients</a>
+            </div>
+            <div class="col-3 text-center">
+                <a asp-controller="FinishedProducts" asp-action="Index" class="btn btn-outline-info form-control">Finished Products</a>
+            </div>
+            <div class="col-3 text-center">
+                <a asp-controller="PurchaseOfMaterials" asp-action="Index" class="btn btn-outline-info form-control">Purchase of Materials</a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-3 text-center">
+                <a asp-controller="Stuffs" asp-action="Index" class="btn btn-outline-info form-control">Stuff</a>
+            </div>
+            <div class="col-3 text-center">
+                <a asp-controller="Units" asp-action="Index" class="btn btn-outline-info form-control">Units</a>
+            </div>
+            <div class="col-3 text-center">
+                <a asp-controller="Budgets" asp-action="Index" class="btn btn-outline-info form-control">Budget</a>
+            </div>
+            <div class="col-3 text-center">
+                <a asp-controller="Productions" asp-action="Index" class="btn btn-outline-info form-control">Production</a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-3 text-center">
+                <a asp-controller="Positions" asp-action="Index" class="btn btn-outline-info form-control">Positions</a>
+            </div>
+            <div class="col-3 text-center">
+                <a asp-controller="ProductSales" asp-action="Index" class="btn btn-outline-info form-control">Product Sales</a>
+            </div>
+
+        </div>
+    </div>
